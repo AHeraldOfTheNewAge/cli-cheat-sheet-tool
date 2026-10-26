@@ -1,5 +1,5 @@
 # cli-cheat-sheet-tool
-A linux cli cheat sheet tool built with GO(Golang)
+A linux cli cheat sheet tool built with GO(Golang).
 You can create multiple cheat sheets, and view them in the terminal whenever you need them!
 
 How to set it up:
