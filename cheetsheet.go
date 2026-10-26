@@ -3,11 +3,14 @@ package main
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 	"strings"
 )
 
+var assetsDir = "cheetsheets"
+
 func isCheatSheetsFolder() bool {
-	info, err := os.Stat("cheetsheets")
+	info, err := os.Stat(assetsDir)
 
 	if err != nil {
 		if os.IsNotExist(err) {
@@ -35,7 +38,7 @@ func printAvailable() {
 		return
 	}
 
-	entries, err := os.ReadDir("cheetsheets")
+	entries, err := os.ReadDir(assetsDir)
 
 	if err != nil {
 		fmt.Println("Error: cheetsheet tool broken! Cannot read in the cheat sheets folder", err)
@@ -59,7 +62,7 @@ func printCheatSheet(cheatSheetName string) {
 		return
 	}
 
-	data, err := os.ReadFile("cheetsheets/" + cheatSheetName + ".txt")
+	data, err := os.ReadFile(filepath.Join(assetsDir, cheatSheetName+".txt"))
 
 	if err != nil {
 		fmt.Println("Error: Cannot read the cheatsheet!", err)
