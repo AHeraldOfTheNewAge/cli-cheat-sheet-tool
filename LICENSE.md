@@ -25,4 +25,4 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <https://unlicense.org>
 
-Punch-in Monica is released under the Unlicense.
+cli-cheat-sheet-tool is released under the Unlicense.
